@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.8;
+    font-size: 18px; /* Increased from 16px to 18px */
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+/* Header Section */
+/* Header Section */
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2.2rem;
+  color: #00897b;
+  font-weight: bold;
+  ;
+}
+
+.logo span {
+  color: #004d40;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00897b;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.voice-assistant-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #00796b;
+  transition: color 0.3s;
+}
+
+.voice-assistant-btn:hover {
+  color: #004d40;
+}
+
+
+
+  
+  /* Home Section */
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px 50px;
+    background-color: #e0f2f1;
+    position: relative;
+  }
+  
+  .home .content {
+    max-width: 600px;
+  }
+  
+  .home .content h1 {
+    font-size: 3rem; /* Increased from 2.5rem to 3rem */
+    color: #004d40;
+  }
+  
+  .home .content h2 {
+    font-size: 1.75rem; /* Increased from 1.5rem to 1.75rem */
+    color: #00796b;
+    margin: 20px 0;
+  }
+  
+  .home .content p {
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .home .btn {
+    background: #00796b;
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem; /* Increased font size */
+    transition: background 0.3s;
+  }
+  
+  .home .btn:hover {
+    background: #004d40;
+  }
+  
+  .image-container {
+    max-width: 500px; /* Adjust based on your image size */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Signup Section */
+  .signup {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .signup .heading {
+    font-size: 2.5rem; /* Increased from 2rem to 2.5rem */
+    color: #004d40;
+    margin-bottom: 30px;
+  }
+  
+  .signup form {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .signup .inputBox {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .signup .inputBox h3 {
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
+    color: #00796b;
+    margin-bottom: 5px;
+  }
+  
+  .signup .inputBox input {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    font-size: 1.1rem; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .signup .btn {
+    background: #00796b;
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem; /* Increased font size */
+    transition: background 0.3s;
+  }
+  
+  .signup .btn:hover {
+    background: #004d40;
+  }
+  
+/* Workouts Section */
+/* Workouts Section */
+.workouts {
+    padding: 50px 20px;
+    background-color: #e0f2f1;
+    text-align: center;
+    position: relative;
+}
+
+.workouts .heading {
+    font-size: 2.5rem; /* Increased from 2rem to 2.5rem */
+    color: #004d40;
+    margin-bottom: 30px;
+}
+
+/* Slider Container */
+.workouts .slider-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.workouts .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.workouts .box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 0 0 auto; /* Prevents items from shrinking or growing */
+    width: 300px; /* Width of each slide */
+    margin: 0 15px; /* Space between slides */
+    text-align: center;
+}
+
+.workouts .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.workouts .box .content {
+    padding: 20px;
+}
+
+.workouts .box .content h3 {
+    color: #004d40;
+    font-size: 1.75rem; /* Increased from 1.5rem to 1.75rem */
+    margin-bottom: 10px;
+}
+
+.workouts .box .content p {
+    color: #666;
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
+    margin-bottom: 20px;
+}
+
+.workouts .box .btn {
+    background: #00796b;
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem; /* Increased font size */
+    transition: background 0.3s;
+}
+
+.workouts .box .btn:hover {
+    background: #004d40;
+}
+
+/* Navigation Arrows */
+.workouts .arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.workouts .arrow.left {
+    left: 10px;
+}
+
+.workouts .arrow.right {
+    right: 10px;
+}
+
+.workouts .arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Activity Section Styles */
+.activity {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.activity h1.heading {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.activity h1.heading span {
+  color: #004d40;
+}
+
+.activity .progress-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.activity .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.activity .inputBox input,
+.activity .inputBox select {
+  width: 48%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.activity .inputBox input::placeholder,
+.activity .inputBox select option {
+  color: #888;
+}
+
+.activity select {
+  appearance: none; /* Remove default browser styles */
+  background-color: #fff; /* White background */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA1Ij4KICA8cGF0aCBkPSJNNSAxMmw1LTUtNS01eiIgZmlsbD0iIzMzMyIvPgo8L3N2Zz4='); /* Custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer; /* Cursor as pointer */
+}
+
+.activity select:focus {
+  border-color: #28a745; /* Focus color */
+}
+
+.activity input[type="submit"] {
+  padding: 10px 30px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activity input[type="submit"]:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.activity .alert {
+  color: green;
+  font-size: 1rem;
+  margin: 10px 0;
+  display: none;
+}
+
+
+/* .activity #activityLog h2 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.activity #activityChart {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Styling */
+/* @media (max-width: 768px) {
+  .activity .inputBox input {
+      width: 100%;
+  }
+} */
+
+
+  
+  /* Services Section */
+  .services {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .services .heading {
+    font-size: 2.5rem; /* Increased from 2rem to 2.5rem */
+    color: #004d40;
+    margin-bottom: 30px;
+  }
+  
+  .services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .services .box {
+    background-color: #e0f2f1;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services .box i {
+    font-size: 3.5rem; /* Increased from 3rem to 3.5rem */
+    color: #00796b;
+    margin-bottom: 20px;
+  }
+  
+  .services .box h3 {
+    color: #004d40;
+    font-size: 1.75rem; /* Increased from 1.5rem to 1.75rem */
+    margin-bottom: 10px;
+  }
+  
+  .services .box p {
+    color: #666;
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
+  }
+  
+  /* Contact Section */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 2rem 0;
+}
+
+.contact .row {
+  display: flex;
+  flex-direction: column; /* Stacks the form and image vertically */
+  align-items: center; /* Center horizontally */
+  width: 100%;
+}
+
+.contact form {
+  width: 50%; /* Adjust this percentage for form width */
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact .inputBox {
+  display: flex;
+  flex-direction: column; /* Stack input fields vertically */
+  gap: 1rem; /* Add space between fields */
+  margin-bottom: 1.5rem;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="number"],
+.contact input[type="password"],
+.contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact .btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.contact .btn:hover {
+  background-color: #218838;
+}
+
+  
+  /* Footer Section */
+  .footer {
+    background-color: #004d40;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer .box {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer .box h3 {
+    color: #fff;
+    font-size: 1.75rem; /* Increased from 1.5rem to 1.75rem */
+    margin-bottom: 20px;
+  }
+  
+  .footer .box p,
+  .footer .box a {
+    color: #bbb;
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
+  }
+  
+  .footer .box a:hover {
+    color: #fff;
+  }
+  
+  .footer .credit {
+    margin-top: 30px;
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
+    color: #bbb;
+  }
+  
+  .footer .credit span {
+    color: #fff;
+  }
+
+  /* Registration Section */
+.registration {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .registration .heading {
+    font-size: 2.5rem; /* Increased from 2rem to 2.5rem */
+    color: #004d40;
+    margin-bottom: 30px;
+  }
+  
+  .registration form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registration .inputBox {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .registration .inputBox input {
+    width: calc(50% - 20px);
+    padding: 12px; /* Increased padding */
+    font-size: 1.1rem; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .registration .inputBox input:focus {
+    border-color: #00796b;
+    outline: none;
+  }
+  
+  .registration .btn {
+    background: #00796b;
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem; /* Increased font size */
+    transition: background 0.3s;
+  }
+  
+  .registration .btn:hover {
+    background: #004d40;
+  }
+  

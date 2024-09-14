@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Fitness </title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- header section starts -->
+<header>
+  <div id="menu-bar" class="fas fa-bars"></div>
+  <a href="#" class="logo"><span>A</span>daptive Fitness</a>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#workouts">Workouts</a>
+    <a href="#activity">Activity</a>
+    <a href="#services">Services</a>
+    <a href="#register">Register</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="icons">
+    <button id="voice-assistant-btn" class="voice-assistant-btn">🎙️</button>
+    <i class="fa fa-user"></i>
+
+</div>
+</header>
+<!-- header section ends -->
+
+
+<!-- home section starts -->
+<section class="home" id="home">
+  <div class="content">
+    <h1>Empowering Every Individual Through Adaptive Fitness</h1>
+    <h2>Customized fitness programs designed for all abilities.</h2>
+    <p>Welcome to our inclusive fitness community, where everyone has the opportunity to pursue a healthier, more active lifestyle. Our certified trainers are dedicated to creating personalized programs that cater to your unique needs and abilities.</p>
+    <a href="#workouts" class="btn">Explore Workouts</a>
+  </div>
+  <div class="image-container">
+    <img src="homepic.png" alt="Fitness Image">
+</div>
+
+</section>
+<!-- home section ends -->
+
+<!-- Workouts Section -->
+<section class="workouts" id="workouts">
+    <h1 class="heading"><span>Workouts</span></h1>
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Workout Boxes -->
+            <div class="box">
+                <img src="seated-cardio.gif" alt="">
+                <div class="content">
+                    <h3>Seated Cardio</h3>
+                    <p>Perfect for individuals with limited mobility, offering a full-body cardio workout while seated.</p>
+                    <button class="btn" onclick="goToWorkout('cardio')">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="seated-strength.gif" alt="">
+                <div class="content">
+                    <h3>Seated Strength Training</h3>
+                    <p>Strength training exercises designed to be performed while seated, focusing on upper body strength and endurance.</p>
+                    <button class="btn" onclick="goToWorkout('strength')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="resistance-band.webp" alt="">
+                <div class="content">
+                    <h3>Resistance Band Exercises</h3>
+                    <p>Utilizes resistance bands to perform a variety of exercises that can be adjusted for different levels of mobility and strength.</p>
+                    <button class="btn" onclick="goToWorkout('resistance')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="yoga.gif" alt="">
+                <div class="content">
+                    <h3>Adaptive Yoga</h3>
+                    <p>Yoga poses and stretches modified for individuals with physical disabilities, focusing on flexibility, relaxation, and mindfulness.</p>
+                    <button class="btn" onclick="goToWorkout('yoga')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="gLykDl.gif" alt="">
+                <div class="content">
+                    <h3>Arm Ergometer</h3>
+                    <p>Cardio equipment that focuses on upper body exercise, suitable for individuals who use their arms primarily for movement.</p>
+                    <button class="btn" onclick="goToWorkout('ergometer')">Learn More</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    </div>
+</section>
+
+<!-- workouts section ends -->
+
+<!-- Daily Activity Monitoring Section -->
+<section class="activity" id="activity">
+  <h1 class="heading"><span>Track Your Daily Activity</span></h1>
+  <div class="progress-container">
+    <!-- Input Form for Activity -->
+    <form id="activityForm">
+      <div class="inputBox">
+        <input type="date" id="activityDate" required>
+        <select id="activityType" required>
+          <option value="" disabled selected>Select Activity Type</option>
+          <option value="Seated Cardio">Seated Cardio</option>
+          <option value="Seated Strength Training">Seated Strength Training</option>
+          <option value="Resistance Band Exercises">Resistance Band Exercises</option>
+          <option value="Adaptive Yoga">Adaptive Yoga</option>
+          <option value="Arm Ergometer">Arm Ergometer</option>
+        </select>
+        <input type="number" id="activityDuration" placeholder="Duration (in minutes)" required>
+      </div>
+      <input type="submit" class="btn" value="Log Activity">
+    </form>
+    
+    <div class="alert" style="display: none;">Activity Logged Successfully!</div>
+
+    <!-- Display User's Activity -->
+    <div id="activityLog">
+      <h2>Your Progress</h2>
+      <canvas id="activityChart"></canvas>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- services section starts -->
+<section class="services" id="services">
+  <h1 class="heading"><span>Services</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-dumbbell"></i>
+      <h3>Adaptive Strength Training</h3>
+      <p>Specially tailored to build muscle strength using adaptive equipment suited for varying abilities.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-balance-scale"></i>
+      <h3>Balance & Mobility Training</h3>
+      <p>Focuses on improving balance and functional mobility through customized exercises.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-user-alt"></i>
+      <h3>Personal Coaching</h3>
+      <p>One-on-one sessions with experienced trainers who specialize in adaptive fitness for all abilities.</p>
+    </div>
+  </div>
+</section>
+<!-- services section ends -->
+
+<!-- registration section starts -->
+<section class="registration" id="register">
+  <h1 class="heading"><span>Register For Personalized Plans</span></h1>
+  <form id="registerForm">
+    <div class="inputBox">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+    </div>
+    <div class="inputBox">
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="password" id="password" placeholder="Password" required>
+    </div>
+    <input type="submit" class="btn" value="Register">
+  </form>
+  <div class="alert" style="display: none;">Registration Successful!</div>
+  <div id="form-errors" style="color: red;"></div>
+</section>
+
+<!-- registration section ends -->
+  
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  <h1 class="heading"><span>Contact Us!</span></h1>
+  <form id="contactForm">
+    <div class="inputBox">
+      <input type="text" id="name" placeholder="Name" required minlength="3">
+      <input type="email" id="emailid" placeholder="Email" required>
+    </div>
+    <div class="inputBox">
+      <input type="tel" id="phoneno" placeholder="Phone Number" required pattern="[0-9]{10}">
+    </div>
+    <textarea placeholder="Message" id="message" name="" cols="30" rows="10" required minlength="10"></textarea>
+    <input type="submit" class="btn" value="Send Message">
+  </form>
+  <div id="error-message" style="color: red;"></div>
+  <div class="alert" style="display: none; color: green;">Message Sent Successfully!</div>
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts -->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>About Us</h3>
+      <p>We provide personalized adaptive fitness programs designed to empower all individuals.</p>
+    </div>
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="#home">Home</a>
+      <a href="#workouts">Workouts</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-phone"></i> +123-456-7890</p>
+      <p><i class="fas fa-envelope"></i> info@adaptivefitness.com</p>
+    </div>
+  </div>
+  <div class="credit">Created by <span>Debug Divas</span> | All rights reserved.</div>
+</section>
+<!-- footer section ends -->
+
+<!-- swiper js link -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  function goToWorkout(workout) {
+      if (workout === 'cardio') {
+          window.location.href = "https://seat-cardio.netlify.app";
+      } else if (workout === 'strength') {
+          window.location.href = "https://seat-strength.netlify.app";
+      } else if (workout === 'resistance') {
+          window.location.href = "https://resistance-band.netlify.app";
+      } else if (workout === 'yoga') {
+          window.location.href = "https://adaptive-yoga.netlify.app";
+      } else if (workout === 'ergometer') {
+          window.location.href = "https://arm-ergometer.netlify.app";
+      } else {
+          alert("Workout not available.");
+      }
+  }
+</script>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="firebase-init.js"></script>
+<script src="./fire.js"></script>
+<script src="./fire2.js"></script>
+<script src="utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</body>
+
+</html>
